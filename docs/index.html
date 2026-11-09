@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Core Companion — Off-Grid LoRa MeshCore &amp; Resilience Suite</title>
   <meta name="description" content="Android companion application for MeshCore LoRa mesh radios and off-grid field operations. Available as the Full Suite and the standalone MeshCore Client." />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; script-src 'unsafe-inline'; connect-src https://api.github.com; img-src 'self' data:; font-src 'self'; base-uri 'none'; form-action 'none'; frame-ancestors 'none';" />
+  <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
   <style>
     :root {
       --bg: #0b111e;
@@ -443,25 +446,42 @@
 
   <script>
     (async function loadReleaseBadges() {
+      function isTrustedReleaseUrl(url) {
+        return typeof url === 'string' && /^https:\/\/github\.com\/RO-Mesh\/core-companion\/releases\/tag\/[A-Za-z0-9._-]+$/.test(url);
+      }
+
       try {
         const res = await fetch('https://api.github.com/repos/RO-Mesh/core-companion/releases?per_page=20');
         if (!res.ok) return;
         const releases = await res.json();
-        const fullRel = releases.find(r => r.tag_name && !r.tag_name.startsWith('client-') && r.tag_name !== 'test-build');
-        const clientRel = releases.find(r => r.tag_name && r.tag_name.startsWith('client-'));
+        if (!Array.isArray(releases)) return;
+
+        const fullRel = releases.find(r => r && typeof r.tag_name === 'string' && !r.tag_name.startsWith('client-') && r.tag_name !== 'test-build');
+        const clientRel = releases.find(r => r && typeof r.tag_name === 'string' && r.tag_name.startsWith('client-'));
 
         if (fullRel) {
-          document.getElementById('full-latest-tag').textContent =
-            (fullRel.prerelease ? 'RC: ' : 'Latest: ') + fullRel.tag_name;
-          document.getElementById('full-download-btn').href = fullRel.html_url;
+          const fullTagEl = document.getElementById('full-latest-tag');
+          const fullBtn = document.getElementById('full-download-btn');
+          if (fullTagEl) {
+            fullTagEl.textContent = (fullRel.prerelease ? 'RC: ' : 'Latest: ') + fullRel.tag_name;
+          }
+          if (fullBtn && isTrustedReleaseUrl(fullRel.html_url)) {
+            fullBtn.href = fullRel.html_url;
+          }
         }
         if (clientRel) {
-          document.getElementById('client-latest-tag').textContent =
-            (clientRel.prerelease ? 'RC: ' : 'Latest: ') + clientRel.tag_name;
-          document.getElementById('client-download-btn').href = clientRel.html_url;
+          const clientTagEl = document.getElementById('client-latest-tag');
+          const clientBtn = document.getElementById('client-download-btn');
+          if (clientTagEl) {
+            clientTagEl.textContent = (clientRel.prerelease ? 'RC: ' : 'Latest: ') + clientRel.tag_name;
+          }
+          if (clientBtn && isTrustedReleaseUrl(clientRel.html_url)) {
+            clientBtn.href = clientRel.html_url;
+          }
         }
       } catch (_) {}
     })();
   </script>
 </body>
 </html>
+
