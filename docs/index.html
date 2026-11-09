@@ -20,8 +20,6 @@
       --accent-soft: rgba(16, 185, 129, 0.14);
       --blue: #38bdf8;
       --blue-soft: rgba(56, 189, 248, 0.14);
-      --amber: #f59e0b;
-      --amber-soft: rgba(245, 158, 11, 0.15);
     }
 
     * {
@@ -135,7 +133,7 @@
     }
 
     .hero {
-      padding: 56px 0 40px;
+      padding: 56px 0 36px;
     }
 
     .pill {
@@ -151,16 +149,16 @@
     }
 
     h1 {
-      font-size: clamp(2rem, 4vw, 2.9rem);
+      font-size: clamp(2.2rem, 4.5vw, 3.2rem);
       line-height: 1.15;
       letter-spacing: -0.03em;
-      margin-bottom: 16px;
+      margin-bottom: 14px;
     }
 
     .hero p {
       color: var(--muted);
       font-size: 1.12rem;
-      max-width: 780px;
+      max-width: 760px;
       margin-bottom: 24px;
     }
 
@@ -168,7 +166,7 @@
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
       gap: 24px;
-      margin: 16px 0 48px;
+      margin: 16px 0 44px;
     }
 
     .card {
@@ -190,7 +188,7 @@
     }
 
     .card-header {
-      margin-bottom: 18px;
+      margin-bottom: 16px;
     }
 
     .tag-badge {
@@ -213,48 +211,22 @@
     }
 
     .card h2 {
-      font-size: 1.45rem;
+      font-size: 1.55rem;
       margin-bottom: 8px;
       letter-spacing: -0.02em;
     }
 
-    .card p {
-      color: var(--muted);
-      font-size: 0.95rem;
-      margin-bottom: 16px;
-    }
-
-    .feature-list {
-      list-style: none;
-      margin-bottom: 24px;
-    }
-
-    .feature-list li {
-      padding: 6px 0;
-      font-size: 0.92rem;
+    .card-desc {
       color: var(--text);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-      display: flex;
-      align-items: baseline;
-      gap: 10px;
-    }
-
-    .card.client-edition .feature-list li::before {
-      content: "•";
-      color: var(--blue);
-      font-weight: bold;
-    }
-
-    .card.full-edition .feature-list li::before {
-      content: "•";
-      color: var(--accent);
-      font-weight: bold;
+      font-size: 1.02rem;
+      line-height: 1.55;
+      margin-bottom: 24px;
     }
 
     .btn-row {
       display: flex;
       flex-wrap: wrap;
-      gap: 10px;
+      gap: 12px;
       margin-top: auto;
     }
 
@@ -262,16 +234,24 @@
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      padding: 10px 16px;
+      padding: 11px 18px;
       border-radius: 10px;
       font-weight: 600;
-      font-size: 0.9rem;
-      transition: opacity 0.15s ease;
+      font-size: 0.92rem;
+      transition: opacity 0.15s ease, transform 0.1s ease;
+      gap: 8px;
     }
 
     .btn:hover {
       opacity: 0.92;
       text-decoration: none;
+      transform: translateY(-1px);
+    }
+
+    .btn-icon {
+      width: 18px;
+      height: 18px;
+      flex-shrink: 0;
     }
 
     .btn-primary-blue {
@@ -310,7 +290,7 @@
       border: 1px solid var(--border);
       border-radius: 12px;
       overflow: hidden;
-      margin-bottom: 48px;
+      margin-bottom: 44px;
     }
 
     th, td {
@@ -336,26 +316,6 @@
       background: rgba(255, 255, 255, 0.05);
       padding: 2px 6px;
       border-radius: 4px;
-    }
-
-    .rc-box {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-left: 4px solid var(--amber);
-      border-radius: 12px;
-      padding: 22px 24px;
-      margin-bottom: 48px;
-    }
-
-    .rc-box h3 {
-      font-size: 1.1rem;
-      margin-bottom: 8px;
-      color: var(--amber);
-    }
-
-    .rc-box p {
-      color: var(--muted);
-      font-size: 0.94rem;
     }
 
     footer {
@@ -403,23 +363,24 @@
         <span class="lang-ro">Comunicații LoRa MeshCore &amp; Reziliență</span>
         <span class="lang-en">Off-Grid LoRa MeshCore &amp; Resilience</span>
       </span>
+      <!-- Simplified Tagline -->
       <h1>
-        <span class="lang-ro">Două Aplicații Dedicate din Același Motor Tehnic</span>
-        <span class="lang-en">Two Tailored Android Builds from One Core Engine</span>
+        <span class="lang-ro">Două Versiuni. Un Singur Motor.</span>
+        <span class="lang-en">Two Builds. One Core.</span>
       </h1>
       <p>
         <span class="lang-ro">
-          Aplicația se conectează direct la radiouri LoRa MeshCore prin Bluetooth (BLE), cablu USB OTG sau TCP/KISS.
-          Alegeți între <strong>Core Client</strong> (client radio simplu și rapid) sau <strong>Core Companion</strong> (suita modulară extinsă de reziliență civilă).
+          Conectare directă la radiouri LoRa MeshCore prin Bluetooth (BLE), cablu USB OTG sau TCP/KISS.
+          Alegeți între <strong>Core Client</strong> (radio simplu și rapid) sau <strong>Core Companion</strong> (suita modulară extinsă de reziliență civilă).
         </span>
         <span class="lang-en">
-          Connects to MeshCore LoRa companion nodes over Bluetooth Low Energy, USB OTG Serial, or TCP/KISS.
+          Direct hardware connectivity to MeshCore LoRa companion nodes over BLE, USB OTG, or TCP/KISS.
           Choose between <strong>Core Client</strong> (simple and focused radio client) or <strong>Core Companion</strong> (complete modular civil resilience suite).
         </span>
       </p>
     </section>
 
-    <!-- Editions Grid: Core Client FIRST, Core Companion SECOND -->
+    <!-- Editions Grid: Simplified Cards without Redundant Lists -->
     <section class="editions-grid">
       <!-- 1. CORE CLIENT -->
       <article class="card client-edition">
@@ -427,44 +388,28 @@
           <div class="card-header">
             <span class="tag-badge tag-client" id="client-latest-tag">Tag: v*</span>
             <h2>Core Client</h2>
-            <p>
-              <span class="lang-ro">Client radio dedicat pentru operare și testare pe teren în rețeaua LoRa MeshCore.</span>
-              <span class="lang-en">Focused LoRa radio client built for everyday field testing and MeshCore operators.</span>
-            </p>
           </div>
-          <ul class="feature-list">
-            <li>
-              <span class="lang-ro">Interfață simplă: Mesaje, Contacte, Hartă, Unelte și Setări</span>
-              <span class="lang-en">Simple interface: Messages, Contacts, Map, Apps, and Settings</span>
-            </li>
-            <li>
-              <span class="lang-ro">Conectare Bluetooth (BLE) cu reconectare automată și cablu USB OTG</span>
-              <span class="lang-en">Bluetooth Low Energy (BLE) auto-reconnect and USB OTG Serial</span>
-            </li>
-            <li>
-              <span class="lang-ro">Hărți topografice și hartă de semnal radio offline</span>
-              <span class="lang-en">Offline topographic maps and RF signal coverage heatmaps</span>
-            </li>
-            <li>
-              <span class="lang-ro">Diagnoză radio: Jurnal recepție (RX Log), zgomot de fond și acoperire</span>
-              <span class="lang-en">Radio diagnostics: RX Log, spectrum noise floor, and coverage mapper</span>
-            </li>
-            <li>
-              <span class="lang-ro">Operator ID și fișă medicală personală pentru semnalul SOS</span>
-              <span class="lang-en">Personal Operator ID &amp; Medical ID for emergency SOS broadcasting</span>
-            </li>
-            <li>
-              <span class="lang-ro">Acces la serviciile online RO-MESH prin autentificare unică SSO</span>
-              <span class="lang-en">Access to RO-MESH online community services via SSO login</span>
-            </li>
-          </ul>
+          <p class="card-desc">
+            <span class="lang-ro">
+              Client radio dedicat pentru operare pe teren în rețeaua LoRa MeshCore. Rapid, simplu și optimizat pentru consum minim de baterie.
+            </span>
+            <span class="lang-en">
+              Focused LoRa radio client built for everyday field testing and operators. Fast, lightweight, and battery-optimized.
+            </span>
+          </p>
         </div>
         <div class="btn-row">
           <a id="client-download-btn" class="btn btn-primary-blue" href="https://github.com/RO-Mesh/core-companion/releases">
+            <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+              <polyline points="7 10 12 15 17 10"></polyline>
+              <line x1="12" y1="15" x2="12" y2="3"></line>
+            </svg>
             <span class="lang-ro">Descarcă Core Client</span>
             <span class="lang-en">Download Core Client</span>
           </a>
           <a class="btn btn-secondary" href="obtainium://app/%7B%22id%22%3A%22corecompanion.romesh%22%2C%22url%22%3A%22https%3A//github.com/RO-Mesh/core-companion%22%2C%22author%22%3A%22RO-Mesh%22%2C%22name%22%3A%22Core%20Client%22%2C%22additionalSettings%22%3A%22%7B%5C%22includePrereleases%5C%22%3Atrue%2C%5C%22fallbackToOlderReleases%5C%22%3Atrue%2C%5C%22filterReleaseTitlesByRegEx%5C%22%3A%5C%22%5C%22%2C%5C%22filterReleaseNotesByRegEx%5C%22%3A%5C%22%5C%22%2C%5C%22verifyLatestTag%5C%22%3Afalse%2C%5C%22dontSortReleasesList%5C%22%3Afalse%2C%5C%22useLatestAssetDateAsReleaseDate%5C%22%3Afalse%2C%5C%22trackOnly%5C%22%3Afalse%2C%5C%22versionExtractionRegEx%5C%22%3A%5C%22%5C%22%2C%5C%22matchGroupToUse%5C%22%3A%5C%22%5C%22%2C%5C%22versionDetection%5C%22%3Atrue%2C%5C%22releaseDateAsVersion%5C%22%3Afalse%2C%5C%22useVersionCodeAsOSVersion%5C%22%3Afalse%2C%5C%22apkFilterRegEx%5C%22%3A%5C%22%5ECore-Client-v.%2A%5B.%5Dapk%24%5C%22%2C%5C%22invertAPKFilter%5C%22%3Afalse%2C%5C%22autoApkFilterByArch%5C%22%3Atrue%2C%5C%22shizukuPretendToBeGooglePlay%5C%22%3Afalse%2C%5C%22exemptFromBackgroundUpdates%5C%22%3Afalse%2C%5C%22skipUpdateNotifications%5C%22%3Afalse%7D%22%7D">
+            <img src="obtainium-logo.png" alt="Obtainium" class="btn-icon" width="18" height="18" />
             <span class="lang-ro">Adaugă în Obtainium</span>
             <span class="lang-en">Add to Obtainium</span>
           </a>
@@ -477,48 +422,28 @@
           <div class="card-header">
             <span class="tag-badge tag-full" id="full-latest-tag">Tag: v*</span>
             <h2>Core Companion</h2>
-            <p>
-              <span class="lang-ro">Suita modulară completă de reziliență civilă, planificare de urgență și comunicații radio.</span>
-              <span class="lang-en">The complete modular suite combining multi-protocol comms with civil resilience and family planning.</span>
-            </p>
           </div>
-          <ul class="feature-list">
-            <li>
-              <span class="lang-ro">Interfață modulară cu panou central și profiluri de operare (Go, Pro, MAX)</span>
-              <span class="lang-en">Modular interface with central hub and operational workspaces (Go, Pro, MAX)</span>
-            </li>
-            <li>
-              <span class="lang-ro">Plan de urgență familie &amp; echipă: coordonare membri, roluri și puncte de regrupare</span>
-              <span class="lang-en">Family &amp; team emergency plan: member coordination, roles, and rally points</span>
-            </li>
-            <li>
-              <span class="lang-ro">Dosar de urgență formatat pentru imprimare pe hârtie (arhivă analogică)</span>
-              <span class="lang-en">Printable emergency binder formatted for paper archive backup</span>
-            </li>
-            <li>
-              <span class="lang-ro">Seif documente și ghiduri de prim-ajutor, cutremur și pană de curent</span>
-              <span class="lang-en">Document vault and offline first-aid, earthquake, and blackout guides</span>
-            </li>
-            <li>
-              <span class="lang-ro">Registrul național al adăposturilor de protecție civilă, complet offline</span>
-              <span class="lang-en">Nationwide civil defense shelter directory, fully offline</span>
-            </li>
-            <li>
-              <span class="lang-ro">Comunicații multi-protocol (HAM Radio, TNC, Reticulum — în dezvoltare)</span>
-              <span class="lang-en">Multi-protocol communications (HAM, TNC, Reticulum — in development)</span>
-            </li>
-            <li>
-              <span class="lang-ro">Acces la serviciile online RO-MESH prin autentificare unică SSO</span>
-              <span class="lang-en">Access to RO-MESH online community services via SSO login</span>
-            </li>
-          </ul>
+          <p class="card-desc">
+            <span class="lang-ro">
+              Suita modulară extinsă de reziliență civilă și comunicații radio. Include planuri de urgență pentru familie, seif criptat și registrul adăposturilor civile.
+            </span>
+            <span class="lang-en">
+              The complete modular suite combining multi-protocol radio comms with civil resilience, family emergency plans, and offline vaults.
+            </span>
+          </p>
         </div>
         <div class="btn-row">
           <a id="full-download-btn" class="btn btn-primary-green" href="https://github.com/RO-Mesh/core-companion/releases">
+            <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+              <polyline points="7 10 12 15 17 10"></polyline>
+              <line x1="12" y1="15" x2="12" y2="3"></line>
+            </svg>
             <span class="lang-ro">Descarcă Core Companion</span>
             <span class="lang-en">Download Core Companion</span>
           </a>
           <a class="btn btn-secondary" href="obtainium://app/%7B%22id%22%3A%22corecompanion.romesh%22%2C%22url%22%3A%22https%3A//github.com/RO-Mesh/core-companion%22%2C%22author%22%3A%22RO-Mesh%22%2C%22name%22%3A%22Core%20Companion%22%2C%22additionalSettings%22%3A%22%7B%5C%22includePrereleases%5C%22%3Atrue%2C%5C%22fallbackToOlderReleases%5C%22%3Atrue%2C%5C%22filterReleaseTitlesByRegEx%5C%22%3A%5C%22%5C%22%2C%5C%22filterReleaseNotesByRegEx%5C%22%3A%5C%22%5C%22%2C%5C%22verifyLatestTag%5C%22%3Afalse%2C%5C%22dontSortReleasesList%5C%22%3Afalse%2C%5C%22useLatestAssetDateAsReleaseDate%5C%22%3Afalse%2C%5C%22trackOnly%5C%22%3Afalse%2C%5C%22versionExtractionRegEx%5C%22%3A%5C%22%5C%22%2C%5C%22matchGroupToUse%5C%22%3A%5C%22%5C%22%2C%5C%22versionDetection%5C%22%3Atrue%2C%5C%22releaseDateAsVersion%5C%22%3Afalse%2C%5C%22useVersionCodeAsOSVersion%5C%22%3Afalse%2C%5C%22apkFilterRegEx%5C%22%3A%5C%22%5ECore-Companion-v.%2A%5B.%5Dapk%24%5C%22%2C%5C%22invertAPKFilter%5C%22%3Afalse%2C%5C%22autoApkFilterByArch%5C%22%3Atrue%2C%5C%22shizukuPretendToBeGooglePlay%5C%22%3Afalse%2C%5C%22exemptFromBackgroundUpdates%5C%22%3Afalse%2C%5C%22skipUpdateNotifications%5C%22%3Afalse%7D%22%7D">
+            <img src="obtainium-logo.png" alt="Obtainium" class="btn-icon" width="18" height="18" />
             <span class="lang-ro">Adaugă în Obtainium</span>
             <span class="lang-en">Add to Obtainium</span>
           </a>
@@ -849,60 +774,6 @@
           </tr>
         </tbody>
       </table>
-    </section>
-
-    <!-- Release Candidates & Testing Box -->
-    <section class="rc-box">
-      <h3>
-        <span class="lang-ro">Versiuni de Testare (Release Candidates <code>-rcN-&lt;commit&gt;</code>)</span>
-        <span class="lang-en">Release Candidates (<code>-rcN-&lt;commit&gt;</code>) &amp; Field Testing</span>
-      </h3>
-      <p>
-        <span class="lang-ro">
-          Înainte de a promova o versiune ca Stabilă, publicăm Release Candidates etichetate cu identificatorul de commit
-          (de exemplu <code>v0.1.0-rc1-3403f7b</code>), urmând modelul de lansare din firmware-ul MeshCore lusofw.
-          Testerii de teren pot instala pachetele direct de pe pagina de Releases și pot trimite feedback pe trackerul de probleme.
-        </span>
-        <span class="lang-en">
-          Before promoting a major update to Stable, we publish Release Candidates tagged with the exact short commit hash
-          (for example <code>v0.1.0-rc1-3403f7b</code>), inspired by the MeshCore lusofw firmware workflow. Field
-          testers can install builds from the Releases page and report feedback on the issue tracker.
-        </span>
-      </p>
-    </section>
-
-    <!-- Obtainium Integration Box -->
-    <section style="background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 26px 28px; margin-bottom: 48px;">
-      <h2 class="section-title">
-        <span class="lang-ro">Actualizări Automate prin Obtainium</span>
-        <span class="lang-en">Automatic Updates with Obtainium</span>
-      </h2>
-      <p class="section-sub">
-        <span class="lang-ro">
-          <a href="https://github.com/ImranR98/Obtainium">Obtainium</a> este un manager gratuit și open-source de aplicații Android care descarcă actualizările direct de pe depozitul GitHub oficial, verifică semnătura SHA-256 și vă notifică automat la apariția versiunilor noi.
-        </span>
-        <span class="lang-en">
-          <a href="https://github.com/ImranR98/Obtainium">Obtainium</a> is an open-source Android update manager that downloads APK releases directly from official GitHub repositories, verifies SHA-256 integrity, and notifies you when updates are released.
-        </span>
-      </p>
-      <div style="display: flex; flex-wrap: wrap; gap: 12px; margin-top: 14px;">
-        <a class="btn btn-primary-blue" href="obtainium://app/%7B%22id%22%3A%22corecompanion.romesh%22%2C%22url%22%3A%22https%3A//github.com/RO-Mesh/core-companion%22%2C%22author%22%3A%22RO-Mesh%22%2C%22name%22%3A%22Core%20Client%22%2C%22additionalSettings%22%3A%22%7B%5C%22includePrereleases%5C%22%3Atrue%2C%5C%22fallbackToOlderReleases%5C%22%3Atrue%2C%5C%22filterReleaseTitlesByRegEx%5C%22%3A%5C%22%5C%22%2C%5C%22filterReleaseNotesByRegEx%5C%22%3A%5C%22%5C%22%2C%5C%22verifyLatestTag%5C%22%3Afalse%2C%5C%22dontSortReleasesList%5C%22%3Afalse%2C%5C%22useLatestAssetDateAsReleaseDate%5C%22%3Afalse%2C%5C%22trackOnly%5C%22%3Afalse%2C%5C%22versionExtractionRegEx%5C%22%3A%5C%22%5C%22%2C%5C%22matchGroupToUse%5C%22%3A%5C%22%5C%22%2C%5C%22versionDetection%5C%22%3Atrue%2C%5C%22releaseDateAsVersion%5C%22%3Afalse%2C%5C%22useVersionCodeAsOSVersion%5C%22%3Afalse%2C%5C%22apkFilterRegEx%5C%22%3A%5C%22%5ECore-Client-v.%2A%5B.%5Dapk%24%5C%22%2C%5C%22invertAPKFilter%5C%22%3Afalse%2C%5C%22autoApkFilterByArch%5C%22%3Atrue%2C%5C%22shizukuPretendToBeGooglePlay%5C%22%3Afalse%2C%5C%22exemptFromBackgroundUpdates%5C%22%3Afalse%2C%5C%22skipUpdateNotifications%5C%22%3Afalse%7D%22%7D">
-          <span class="lang-ro">Adaugă Core Client în Obtainium</span>
-          <span class="lang-en">Add Core Client to Obtainium</span>
-        </a>
-        <a class="btn btn-primary-green" href="obtainium://app/%7B%22id%22%3A%22corecompanion.romesh%22%2C%22url%22%3A%22https%3A//github.com/RO-Mesh/core-companion%22%2C%22author%22%3A%22RO-Mesh%22%2C%22name%22%3A%22Core%20Companion%22%2C%22additionalSettings%22%3A%22%7B%5C%22includePrereleases%5C%22%3Atrue%2C%5C%22fallbackToOlderReleases%5C%22%3Atrue%2C%5C%22filterReleaseTitlesByRegEx%5C%22%3A%5C%22%5C%22%2C%5C%22filterReleaseNotesByRegEx%5C%22%3A%5C%22%5C%22%2C%5C%22verifyLatestTag%5C%22%3Afalse%2C%5C%22dontSortReleasesList%5C%22%3Afalse%2C%5C%22useLatestAssetDateAsReleaseDate%5C%22%3Afalse%2C%5C%22trackOnly%5C%22%3Afalse%2C%5C%22versionExtractionRegEx%5C%22%3A%5C%22%5C%22%2C%5C%22matchGroupToUse%5C%22%3A%5C%22%5C%22%2C%5C%22versionDetection%5C%22%3Atrue%2C%5C%22releaseDateAsVersion%5C%22%3Afalse%2C%5C%22useVersionCodeAsOSVersion%5C%22%3Afalse%2C%5C%22apkFilterRegEx%5C%22%3A%5C%22%5ECore-Companion-v.%2A%5B.%5Dapk%24%5C%22%2C%5C%22invertAPKFilter%5C%22%3Afalse%2C%5C%22autoApkFilterByArch%5C%22%3Atrue%2C%5C%22shizukuPretendToBeGooglePlay%5C%22%3Afalse%2C%5C%22exemptFromBackgroundUpdates%5C%22%3Afalse%2C%5C%22skipUpdateNotifications%5C%22%3Afalse%7D%22%7D">
-          <span class="lang-ro">Adaugă Core Companion în Obtainium</span>
-          <span class="lang-en">Add Core Companion to Obtainium</span>
-        </a>
-        <a class="btn btn-secondary" href="obtainium-client.json" download>
-          <span class="lang-ro">Configurare JSON (Client)</span>
-          <span class="lang-en">Config JSON (Client)</span>
-        </a>
-        <a class="btn btn-secondary" href="obtainium-full.json" download>
-          <span class="lang-ro">Configurare JSON (Suită)</span>
-          <span class="lang-en">Config JSON (Suite)</span>
-        </a>
-      </div>
     </section>
   </main>
 
