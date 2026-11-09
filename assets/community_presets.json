@@ -1,0 +1,39 @@
+{
+  "version": 1,
+  "updated_at": "2026-10-16T12:00:00Z",
+  "authority": "RO-MESH Community Initiative",
+  "channels": [
+    {
+      "name": "Public",
+      "secret_hex": "8b3387e9c5cdea6ac9e5edbaa115cd72",
+      "description": "Canal pan-european MeshCore (comunitate internațională)",
+      "scope": "europe",
+      "is_default": true,
+      "locked_in_go": true
+    },
+    {
+      "name": "#romania",
+      "secret_hex": "2f4cc52a408e5147530549fbd6effc8a",
+      "description": "Canal național RO-MESH — discuții libere & comunitate",
+      "scope": "ro",
+      "is_default": true,
+      "locked_in_go": true
+    },
+    {
+      "name": "#sos",
+      "secret_hex": "9ed2c78bcd68ac7ce2a2fc3bb4045114",
+      "description": "Canal critic de urgență națională",
+      "scope": "ro",
+      "is_default": true,
+      "locked_in_go": true
+    },
+    {
+      "name": "#alerte",
+      "secret_hex": "2e7f29039d4e3533e5f01287995f5d82",
+      "description": "Alerte și urgențe locale — adaptat la județ",
+      "scope": "ro",
+      "is_default": true,
+      "locked_in_go": true
+    }
+  ]
+}
