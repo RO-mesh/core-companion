@@ -10,9 +10,9 @@ Security fixes are released for the following versions:
 
 | Version Line | Supported | Notes |
 |:---|:---:|:---|
-| Current Stable (`v0.7.x`, `v0.8.x`) | ✅ Yes | Actively maintained |
-| Release Candidates (`-rcN-*`) | ✅ Yes | Pre-release testing builds |
-| Older releases (`< v0.7.0`) | ❌ No | Please upgrade to the latest stable or RC build |
+| Current Stable (`v0.1.x`) | ✅ Yes | Actively maintained |
+| Release Candidates (`v0.1.x-rcN-*`) | ✅ Yes | Pre-release testing builds |
+| Legacy pre-0.1 builds | ❌ No | Please upgrade to the latest `v0.1.x` or RC build |
 
 ---
 
@@ -39,7 +39,7 @@ To help us investigate and patch the vulnerability as quickly as possible, pleas
 
 ## Security Practices in Core Companion
 
-Core Companion adheres to a defense-in-depth security model informed by the `harperaa/secure-claude-skills` standard:
+Core Companion adheres to a defense-in-depth security model informed by the `cloudflare/security-audit-skill` standard:
 * **No Secret Leakage**: No private signing keys, keystores, or tokens are ever embedded in source code or public repositories.
 * **Strict Download Allowlists**: In-app updates verify HTTPS origin against an explicit domain allowlist and validate binary checksums (`SHA256SUMS.txt`).
 * **Path Traversal Protection**: All user input, preset files, and update file names are strictly sanitized against directory traversal attacks.

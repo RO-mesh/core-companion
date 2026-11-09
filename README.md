@@ -32,12 +32,12 @@ sha256sum -c SHA256SUMS.txt --ignore-missing
 
 ## Release Channels: Stable vs. Release Candidates (`-rc`)
 
-Similar to the [MeshCore lusofw firmware releases](https://github.com/Meshcore-Portugal/lusofw/releases), Core Companion uses two release tracks:
+Similar to the [MeshCore lusofw firmware releases](https://github.com/Meshcore-Portugal/lusofw/releases), both editions of Core Companion share a unified version number across two release stages:
 
-1. **Release Candidates (`vX.Y.Z-rcN-<commit>` and `client-vX.Y.Z-rcN-<commit>`)**:
-   Marked as **Pre-release** on GitHub. These builds are cut directly from a specific commit hash (for example `v0.8.0-rc1-6697d76`) so field testers can verify BLE reconnect behavior, LoRa packet framing, and battery consumption on real hardware before a version is promoted.
-2. **Stable Releases (`vX.Y.Z` and `client-vX.Y.Z`)**:
-   Marked as **Latest** on GitHub. Once a release candidate passes field testing without regressions, it is published as a clean semantic version tag. The in-app updater tracks stable releases for your installed edition by default.
+1. **Release Candidates (`vX.Y.Z-rcN-<commit>`)**:
+   Marked as **Pre-release** on GitHub. Each release candidate tag (for example `v0.1.0-rc1-88be70a`) publishes APKs for both **Core Companion (Full Suite)** (`Core-v*`) and **Core Companion (MeshCore Client)** (`Core-Companion-MeshCore-v*`) so field testers can verify BLE reconnect behavior, LoRa packet framing, and battery consumption on real hardware before promotion.
+2. **Stable Releases (`vX.Y.Z`)**:
+   Marked as **Latest** on GitHub. Once a release candidate passes field testing without regressions, it is promoted to a clean semantic version tag (for example `v0.1.0`).
 
 ### Automatic Updates with Obtainium
 

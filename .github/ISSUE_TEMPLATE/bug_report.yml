@@ -23,8 +23,8 @@ body:
     id: version
     attributes:
       label: App Version / Tag
-      description: Found in Settings -> App Updates (e.g., v0.7.13+37, v0.8.0-rc1-6697d76, or client-v1.3.0)
-      placeholder: "v0.7.13+37"
+      description: Found in Settings -> App Updates (e.g., v0.1.0-rc1+1, v0.1.0-rc1-88be70a, or v0.1.0)
+      placeholder: "v0.1.0-rc1+1"
     validations:
       required: true
 
