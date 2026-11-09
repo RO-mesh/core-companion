@@ -10,8 +10,8 @@ Every release cycle produces two Android builds from the same underlying engine 
 
 | Edition | Tag Prefix | APK Filename Prefix | What It Includes |
 |---|---|---|---|
-| **Core Companion** (Full Suite) | `v*` (e.g. `v0.8.0`) | `Core-v*` | The complete application: Portal Hub, Seif (offline maps, civil shelters, emergency guides, home region), Plan (family/team roster, Medical ID, scheduled listening windows, printable analog binder), Operativ (RF diagnostics & coverage mapper), and MeshCore Comms. |
-| **Core Companion (MeshCore Client)** | `client-v*` (e.g. `client-v1.3.0`) | `Core-Companion-MeshCore-v*` | A focused 5-tab client (`Messages`, `Contacts`, `Map`, `Apps`, `Settings`) built specifically for everyday MeshCore radio operators, with modular RF diagnostics (`RX Log`, `Noise Floor`, `Telemetry`, `Topology`, `Coverage Mapper`, `Offline Maps`, `Repeater Directory`). |
+| **Core Client** (MeshCore Radio Client) | `client-v*` or unified `v*` | `Core-Client-v*` | A focused 5-tab client (`Messages`, `Contacts`, `Map`, `Apps`, `Settings`) built specifically for everyday MeshCore radio field testing & operators, with modular RF diagnostics (`RX Log`, `Noise Floor`, `Telemetry`, `Topology`, `Coverage Mapper`, `Offline Maps`, `Repeater Directory`). |
+| **Core Companion** (Full Suite) | `v*` (e.g. `v0.1.0-rc1+1`) | `Core-Companion-v*` | The complete multi-protocol application & civil resilience hub: Portal Hub, Seif (offline maps, civil shelters, emergency guides, home region), Plan (family/team roster, Medical ID, scheduled listening windows, printable analog binder), Operativ (RF diagnostics & coverage mapper), and Comms Hub. |
 
 ## Which APK File Should I Download?
 
@@ -35,20 +35,20 @@ sha256sum -c SHA256SUMS.txt --ignore-missing
 Similar to the [MeshCore lusofw firmware releases](https://github.com/Meshcore-Portugal/lusofw/releases), both editions of Core Companion share a unified version number across two release stages:
 
 1. **Release Candidates (`vX.Y.Z-rcN-<commit>`)**:
-   Marked as **Pre-release** on GitHub. Each release candidate tag (for example `v0.1.0-rc1-88be70a`) publishes APKs for both **Core Companion (Full Suite)** (`Core-v*`) and **Core Companion (MeshCore Client)** (`Core-Companion-MeshCore-v*`) so field testers can verify BLE reconnect behavior, LoRa packet framing, and battery consumption on real hardware before promotion.
+   Marked as **Pre-release** on GitHub. Each release candidate tag (for example `v0.1.0-rc1-88be70a`) publishes APKs for both **Core Client** (`Core-Client-v*`) and **Core Companion** (`Core-Companion-v*`) so field testers can verify BLE reconnect behavior, LoRa packet framing, and battery consumption on real hardware before promotion.
 2. **Stable Releases (`vX.Y.Z`)**:
    Marked as **Latest** on GitHub. Once a release candidate passes field testing without regressions, it is promoted to a clean semantic version tag (for example `v0.1.0`).
 
 ### Automatic Updates with Obtainium
 
-If you use [Obtainium](https://github.com/ImranR98/Obtainium) on Android, you can add Core Companion with 1 click directly from the [showcase page](https://ro-mesh.github.io/core-companion/), or configure it manually:
+If you use [Obtainium](https://github.com/ImranR98/Obtainium) on Android, you can add Core Companion or Core Client with 1 click directly from the [showcase page](https://ro-mesh.github.io/core-companion/), or configure it manually:
 
 - **App Source URL**: `https://github.com/RO-Mesh/core-companion`
 - **Fallback to older releases**: Enabled (ensures you don't receive updates meant for the other edition)
 - **Filter APKs by architecture**: Enabled (automatically selects `arm64-v8a` for 64-bit devices, `armeabi-v7a` for 32-bit, or `x86_64` for emulators)
 - **APK Filter RegEx**:
-  - **Core Companion (Full Suite)**: `^Core-v.*[.]apk$`
-  - **Core Companion (MeshCore Client)**: `^Core-Companion-MeshCore-v.*[.]apk$`
+  - **Core Client**: `^Core-Client-v.*[.]apk$`
+  - **Core Companion**: `^Core-Companion-v.*[.]apk$`
 
 You can also import the pre-configured [obtainium-full.json](https://ro-mesh.github.io/core-companion/obtainium-full.json) or [obtainium-client.json](https://ro-mesh.github.io/core-companion/obtainium-client.json) directly into Obtainium.
 
