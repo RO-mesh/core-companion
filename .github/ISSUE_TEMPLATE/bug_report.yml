@@ -41,11 +41,22 @@ body:
       required: true
 
   - type: input
-    id: hardware
+    id: phone_device
     attributes:
-      label: Phone & Companion Radio Hardware
-      description: Android model/OS version and LoRa board (e.g., Pixel 8 Android 15 + Heltec V3 / T-Beam / RAK4631)
-      placeholder: "Samsung S23 (Android 14) + Heltec V3 running MeshCore companion"
+      label: Phone / Host Device & Operating System
+      description: Phone/tablet model and Android/OS version (e.g., Samsung Galaxy S23 running Android 14, Pixel 8 running Android 15 / GrapheneOS).
+      placeholder: "Samsung Galaxy S23 (Android 14)"
+    validations:
+      required: true
+
+  - type: input
+    id: companion_radio
+    attributes:
+      label: Companion Radio Hardware & Firmware (Optional)
+      description: LoRa board model, chipset, and companion firmware version if this issue involves radio operation.
+      placeholder: "Heltec WiFi LoRa 32 V3 (ESP32-S3 + SX1262) - MeshCore companion v1.2.4"
+    validations:
+      required: false
 
   - type: textarea
     id: description

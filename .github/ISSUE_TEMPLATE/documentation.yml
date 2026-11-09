@@ -1,0 +1,51 @@
+name: Documentation, Guides & Translation
+description: Suggest improvements or corrections to operational guides, pocket emergency cards, or app translations
+title: "[Docs]: "
+labels: ["documentation", "i18n"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Accurate, clear documentation and precise translations are life-saving during emergencies. Thank you for contributing to Core Companion's guides and internationalization.
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area / Guide Affected
+      options:
+        - In-App User Interface Translation (i18n)
+        - Civil Defense & Preparedness Guides (Fiipregatit, emergency checklists)
+        - Radio Companion Manual & Quickstart Guide
+        - Analog Plan & Pocket Binder Cards
+        - Public Website / GitHub Pages / README
+    validations:
+      required: true
+
+  - type: dropdown
+    id: language
+    attributes:
+      label: Language
+      options:
+        - Romanian (Română)
+        - English
+        - Spanish (Español)
+        - Portuguese (Português)
+        - Other / Propose New Language
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description of the Issue / Missing Content
+      description: What is inaccurate, unclear, missing, or mistranslated?
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposed_text
+    attributes:
+      label: Proposed Content / Corrected Translation
+      description: Provide the improved text, translation, or paragraph.
+    validations:
+      required: true

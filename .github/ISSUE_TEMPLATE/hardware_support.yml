@@ -1,0 +1,74 @@
+name: Radio Hardware / Board Support
+description: Request support or report test results for a new LoRa board, display, or companion hardware
+title: "[Hardware]: "
+labels: ["hardware", "device-support"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping expand Core Companion's hardware compatibility! Please provide technical details about the LoRa board, microcontroller, and radio chip.
+
+  - type: input
+    id: board_model
+    attributes:
+      label: Board Model & Manufacturer
+      description: Exact board name and manufacturer (e.g., LilyGO T-Echo, Heltec Wireless Tracker, Seeed Studio T1000-E, RAK4631).
+      placeholder: "LilyGO T-Echo"
+    validations:
+      required: true
+
+  - type: input
+    id: chipsets
+    attributes:
+      label: MCU & LoRa Transceiver
+      description: Microcontroller SoC and LoRa RF transceiver chipset, including operating frequency.
+      placeholder: "Nordic nRF52840 + Semtech SX1262 (868 MHz)"
+    validations:
+      required: true
+
+  - type: input
+    id: peripherals
+    attributes:
+      label: Display, GPS & Peripherals
+      description: Screen type, GNSS/GPS module, keyboard, rotary encoder, or onboard sensors.
+      placeholder: "1.54\" E-Ink display, onboard L76K GPS, capacitive touch button"
+
+  - type: dropdown
+    id: connection_method
+    attributes:
+      label: Connection Method Tested
+      description: How have you connected (or plan to connect) this hardware to your phone?
+      options:
+        - Bluetooth Low Energy (BLE)
+        - USB Serial (OTG)
+        - TCP / KISS Modem Network
+        - Not tested yet / Device support request only
+    validations:
+      required: true
+
+  - type: dropdown
+    id: firmware_status
+    attributes:
+      label: MeshCore Firmware Status
+      description: What firmware is installed on the radio board?
+      options:
+        - MeshCore Companion Firmware (Official / upstream)
+        - Lusofw / MeshCore community fork
+        - Custom firmware
+        - Not flashed yet / Manufacturer default
+    validations:
+      required: true
+
+  - type: textarea
+    id: test_results
+    attributes:
+      label: Test Results & Current Behavior
+      description: Describe what works and what fails when attempting to use this device with Core Companion (e.g., pairing, packet sync, RX log, serial baud rate).
+    validations:
+      required: true
+
+  - type: textarea
+    id: documentation_links
+    attributes:
+      label: Schematics, Pinout & Documentation Links
+      description: Links to board pinouts, schematics, manufacturer repositories, or purchase pages.

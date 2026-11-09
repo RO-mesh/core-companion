@@ -1,0 +1,66 @@
+name: Community Mesh Preset Proposal
+description: Propose a regional frequency channel, modulation settings, or emergency preset for community_presets.json
+title: "[Preset]: "
+labels: ["presets", "community"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Community presets allow local groups, emergency response units, and mesh operators to coordinate frequencies, bandwidth, and spreading factors. Accepted presets are added to `assets/community_presets.json` and distributed to all Core Companion users.
+
+  - type: input
+    id: preset_name
+    attributes:
+      label: Preset Name & Identifier
+      description: Clear, capitalized name for the preset (e.g., RO-EMERGENCY-868, BUCHAREST-CIVIC-MESH, US-EMCOMM-915).
+      placeholder: "RO-EMERGENCY-868"
+    validations:
+      required: true
+
+  - type: input
+    id: geographic_scope
+    attributes:
+      label: Geographic Scope / Country / Region
+      description: Where is this preset intended to be used? (e.g., Romania (National), Cluj-Napoca, EU CEPT regions).
+      placeholder: "Romania (National / Emergency & Civil Defense)"
+    validations:
+      required: true
+
+  - type: input
+    id: frequency
+    attributes:
+      label: Center Frequency (MHz)
+      description: Exact RF center frequency in MHz.
+      placeholder: "869.525"
+    validations:
+      required: true
+
+  - type: input
+    id: modulation
+    attributes:
+      label: Modulation Parameters (BW, SF, CR, Max TX Power)
+      description: Bandwidth in kHz, Spreading Factor (SF7-SF12), Coding Rate (CR 4/5 - 4/8), and max legal TX power in dBm.
+      placeholder: "BW: 250 kHz, SF: 11, CR: 4/5, TX Power: 27 dBm (500mW EIRP)"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: preset_role
+    attributes:
+      label: Operational Role / Profile
+      options:
+        - Emergency / Civil Defense (SOS alerts, evacuation, prioritized traffic)
+        - Public Community Mesh (General communication, open discovery)
+        - Tactical / Search & Rescue (Inter-team tactical dispatch, telemetry)
+        - Backbone / Repeater Relay (High-gain mountain top relays)
+        - Licensed Amateur Radio (HAM frequencies / callsign rules)
+    validations:
+      required: true
+
+  - type: textarea
+    id: regulations_and_context
+    attributes:
+      label: Local Regulatory Compliance & Community Context
+      description: Provide details regarding regulatory compliance (duty cycle limits, EIRP caps, ANCOM/FCC rules) and links to local mesh groups or emergency protocols.
+    validations:
+      required: true

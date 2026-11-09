@@ -1,0 +1,62 @@
+name: Geospatial Dataset / Offline Map Request
+description: Suggest civil defense shelter registries, drinking water sources, or offline map layers for Core Companion
+title: "[Dataset]: "
+labels: ["gis", "data"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Core Companion provides 100% offline geospatial layers and registries in the Vault and Map modules. We welcome verified open-data sets for civil protection, survival, and off-grid navigation. Please ensure datasets use open licenses (e.g., ODbL, CC-BY, public government data).
+
+  - type: input
+    id: dataset_name
+    attributes:
+      label: Dataset Name & Geographic Scope
+      description: Name of the dataset and geographic region it covers (e.g., Civil Defense Shelters - Timiș County, Mountain Springs - Făgăraș, Romania Offline Topo).
+      placeholder: "Civil Defense Shelters - Timiș County"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: Dataset Category
+      options:
+        - Civil Defense & Air Raid Shelters (Adăposturi protecție civilă)
+        - Potable Water Sources & Natural Springs (Surse apă potabilă)
+        - Medical & First Aid Facilities (Puncte prim ajutor, spitale)
+        - Offline MBTiles Basemap (Hărți offline pre-renderizate)
+        - Off-Grid Navigational Overlays (Topografie, trasee, pasuri montane)
+        - Other Critical Infrastructure
+    validations:
+      required: true
+
+  - type: input
+    id: source_license
+    attributes:
+      label: Data Source URL & License
+      description: Link to the official source repository and its open data license (e.g., data.gov.ro / ODbL / CC-BY-4.0).
+      placeholder: "https://data.gov.ro/dataset/... (Licență Guvern Deschis / ODbL)"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: format
+    attributes:
+      label: Available Data Format
+      options:
+        - GeoJSON
+        - CSV with WGS-84 Coordinates (Latitude / Longitude)
+        - MBTiles (Raster or Vector tiles)
+        - Shapefile / GPX / KML (Requires conversion)
+        - Unstructured table / Needs manual extraction
+    validations:
+      required: true
+
+  - type: textarea
+    id: details
+    attributes:
+      label: Details & Integration Notes
+      description: Additional context about the dataset (e.g., date of last verification, operational vs inactive status, known coordinate accuracy).
+    validations:
+      required: true
