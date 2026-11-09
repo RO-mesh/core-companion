@@ -64,3 +64,4 @@ body:
       description: Provide details regarding regulatory compliance (duty cycle limits, EIRP caps, ANCOM/FCC rules) and links to local mesh groups or emergency protocols.
     validations:
       required: true
+

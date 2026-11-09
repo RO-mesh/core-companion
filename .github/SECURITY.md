@@ -45,3 +45,4 @@ Core Companion adheres to a defense-in-depth security model informed by the `har
 * **Path Traversal Protection**: All user input, preset files, and update file names are strictly sanitized against directory traversal attacks.
 * **Obfuscation**: Production AOT binaries are compiled with `--obfuscate --split-debug-info`, and debug symbols are kept strictly private.
 * **Zero Tracking / Zero Telemetry**: Core Companion collects zero personal data, zero analytics, and runs 100% offline.
+

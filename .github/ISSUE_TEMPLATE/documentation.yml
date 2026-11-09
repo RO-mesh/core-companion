@@ -49,3 +49,4 @@ body:
       description: Provide the improved text, translation, or paragraph.
     validations:
       required: true
+

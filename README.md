@@ -47,8 +47,8 @@ If you use [Obtainium](https://github.com/ImranR98/Obtainium) on Android, you ca
 - **Fallback to older releases**: Enabled (ensures you don't receive updates meant for the other edition)
 - **Filter APKs by architecture**: Enabled (automatically selects `arm64-v8a` for 64-bit devices, `armeabi-v7a` for 32-bit, or `x86_64` for emulators)
 - **APK Filter RegEx**:
-  - **Core Companion (Full Suite)**: `^Core-v.*\.apk$`
-  - **Core Companion (MeshCore Client)**: `^Core-Companion-MeshCore-v.*\.apk$`
+  - **Core Companion (Full Suite)**: `^Core-v.*[.]apk$`
+  - **Core Companion (MeshCore Client)**: `^Core-Companion-MeshCore-v.*[.]apk$`
 
 You can also import the pre-configured [obtainium-full.json](https://ro-mesh.github.io/core-companion/obtainium-full.json) or [obtainium-client.json](https://ro-mesh.github.io/core-companion/obtainium-client.json) directly into Obtainium.
 
