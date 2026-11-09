@@ -6,12 +6,28 @@ All official APK builds and release candidates are published on the [Releases](h
 
 ## Two Editions, One Core
 
-Every release cycle produces two Android builds from the same underlying engine so you can install the layout that matches how you use your radio:
+Every release cycle builds two Android editions from the same shared core engine:
+- **Core Client**: Simple, focused radio client built specifically for everyday field testing and LoRa mesh communications.
+- **Core Companion**: Modular, extensible civil resilience suite integrating multi-protocol comms, offline vaults, and emergency coordination.
 
-| Edition | Tag Prefix | APK Filename Prefix | What It Includes |
-|---|---|---|---|
-| **Core Client** (MeshCore Radio Client) | `client-v*` or unified `v*` | `Core-Client-v*` | A focused 5-tab client (`Messages`, `Contacts`, `Map`, `Apps`, `Settings`) built specifically for everyday MeshCore radio field testing & operators, with modular RF diagnostics (`RX Log`, `Noise Floor`, `Telemetry`, `Topology`, `Coverage Mapper`, `Offline Maps`, `Repeater Directory`). |
-| **Core Companion** (Full Suite) | `v*` (e.g. `v0.1.0-rc1+1`) | `Core-Companion-v*` | The complete multi-protocol application & civil resilience hub: Portal Hub, Seif (offline maps, civil shelters, emergency guides, home region), Plan (family/team roster, Medical ID, scheduled listening windows, printable analog binder), Operativ (RF diagnostics & coverage mapper), and Comms Hub. |
+### Feature Comparison
+
+| Feature | Core Client | Core Companion | Details |
+|---|:---:|:---:|---|
+| **Interface** | **Simple** | **Modular** | Direct radio focus vs. extensible central hub. |
+| **Operational Workspaces** | ❌ | ✅ | Go (Citizen), Pro (Operator), MAX (SAR Command). |
+| **MeshCore Messaging** | ✅ | ✅ | Public channels, encrypted channels, direct messages. |
+| **Hardware Connectivity (BLE & USB OTG)** | ✅ | ✅ | Direct companion node support (LilyGO, Heltec, RAK, Seeed). |
+| **Offline Topo & Signal Coverage Maps** | ✅ | ✅ | OpenStreetMap & OpenTopoMap with RF signal heatmaps (no API keys). |
+| **RF Diagnostics Suite** | ✅ | ✅ | RX Log, spectrum noise floor, field coverage mapper, topology. |
+| **Personal Operator & Medical ID** | ✅ | ✅ | Personal callsign & medical profile for emergency SOS broadcasting. |
+| **RO-MESH Online Services (SSO Login)** | ✅ *(Optional)* | ✅ *(Optional)* | Secure single sign-on access to community services & presets. |
+| **Family & Team Emergency Plan** | ❌ | ✅ | Multi-member coordination, roles, rally points. |
+| **Printable Emergency Binder** | ❌ | ✅ | Formatted paper export for offline analog archive. |
+| **Document Vault & Survival Guides** | ❌ | ✅ | Offline first-aid, earthquake, blackout guides & encrypted storage. |
+| **Civil Defense Shelter Directory** | ❌ | ✅ | Complete nationwide offline shelter database for Romania. |
+| **Multi-Protocol (HAM, TNC, Reticulum)** | ❌ | ⏳ | Expanding beyond MeshCore *(In Development)*. |
+| **Recommended Target** | **Field Testers & Daily Radio Operators** | **Emergency Preparedness, Families & SAR Responders** | Choose the edition tailored to your operational profile. |
 
 ## Which APK File Should I Download?
 
