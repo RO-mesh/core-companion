@@ -1,0 +1,31 @@
+name: Feature Request
+description: Suggest a new radio tool, module, or improvement for Core Companion
+title: "[Feature]: "
+labels: ["enhancement"]
+body:
+  - type: dropdown
+    id: edition
+    attributes:
+      label: Target Edition
+      options:
+        - Both Editions
+        - Core Companion (Full Suite)
+        - Core Companion (MeshCore Client)
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Use Case / Problem to Solve
+      description: How would this feature help during radio operation or off-grid use?
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed Solution
+      description: Describe how you envision this working.
+    validations:
+      required: true
