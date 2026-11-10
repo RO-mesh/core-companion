@@ -1,7 +1,7 @@
 {
   "apps": [
     {
-      "id": "corecompanion.romesh",
+      "id": "coreclient.romesh",
       "url": "https://github.com/RO-Mesh/core-companion",
       "author": "RO-Mesh",
       "name": "Core Client",
